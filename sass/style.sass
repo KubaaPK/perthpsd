@@ -1,0 +1,684 @@
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush|Open+Sans:300,400,700')
+$alexbrush: 'Alex Brush', cursive
+$opensans: 'Open Sans', sans-serif
+
+*
+    box-sizing: border-box
+
+
+.container
+    width: 80%
+    margin: 0 auto
+
+@media only screen and (min-width : 20em)
+    .header
+        height: 100vh
+        position: relative
+        padding-top: 15px
+        background: 
+            image: url("../img/headerbg.jpg")
+            size: cover 
+        z-index: 0
+
+        
+        
+        .open
+            transition: .2s
+            transform: rotate(180deg)
+            &:focus
+                outline: none
+            .navigation__showMenuBtn__bar
+                transition: .2s
+                &:nth-child(1)
+                    position: relative
+                    top: -10px
+                    opacity: 0
+                    transition: .2s
+                &:nth-child(2)
+                    position: relative
+                    top: -8px
+                    transition: .2s
+                    &:after
+                        position: absolute
+                        top: 3px
+                        left: 0
+                        right: 0
+                        content: '\2716'
+                        color: #FFFFFF
+                &:nth-child(3)
+                    position: relative
+                    top: 8px
+                    transition: .2s
+                &:nth-child(4)
+                    position: relative
+                    top: 10px
+                    opacity: 0
+                    transition: .2s
+        
+        .navigation
+            margin-top: 0
+            &__logo
+                width: 20%
+                position: absolute
+                top: 4vh
+                left: 4vh
+
+            &__showMenuBtn
+                background-color: transparent
+                border: 0
+                position: absolute
+                right: 0
+                top: 7vh
+                right: 7vw
+                transition: .2s
+                &__bar
+                    display: block
+                    height: 2px
+                    width: 20px
+                    background-color: #FFFFFF
+                    margin: 3px 0
+                    top: 0
+                    left: 0
+                    right: 0
+                    bottom: 0
+                    transition: .2s
+
+            &__list
+                display: block
+                background-color: rgba(lighten(#ea4c89, 10%), .6)
+                padding-left: 0
+                margin-top: 0
+                height: 0
+                transition: .2s
+                
+                &__element
+                    display: none
+                    position: relative
+                    top: 40vh
+                    margin: 4vh 0
+                    text-align: center
+                    list-style-type: none
+                    &:first-child
+                        margin-top: 0
+                    &__link
+                        font: 
+                            family: $opensans
+                            size: .9rem
+                            weight: 700
+                        text:
+                            decoration: none
+                        color: #FFFFFF
+                        letter-spacing: .2rem
+        .show
+            height: 100vh
+            margin-top: -15px
+            transition: .2s
+            .navigation
+                &__list
+                    &__element
+                        display: block
+
+                
+        
+        &__text
+            padding-top: 20vh
+            text-align: center
+            &__title
+                margin-top: 0
+                margin-bottom: 0
+                font:
+                    family: $alexbrush
+                    size: 2.75rem
+                    weight: 300
+                color: #FFFFFF
+                letter-spacing: .2rem
+            
+            &__subtitle
+                font:
+                    family: $opensans
+                    size: 1.1rem
+                color: #FFFFFF
+                strong
+                    font-style: italic
+            
+            &__link
+                position: relative
+                top: 5vh
+                padding: .5rem 1rem
+                font:
+                    family: $opensans
+                    size: 1rem
+                color: #FFFFFF
+                text:
+                    decoration: none
+                    transform: uppercase
+                border: 2px solid #FFFFFF
+                z-index: 5
+            
+            &__img
+                position: absolute
+                top: 60vh
+                left: 0
+                right: 0
+                margin: 0 auto
+                width: 60%
+                z-index: -1
+                
+                
+
+
+    .about
+        height: 120vh
+        padding-top: 10vh
+        position: relative
+        z-index: 1
+        background-color: #f4f4f4
+        overflow: hidden
+
+        &__text
+            &__title
+                margin-top: 0
+                color: #5d5d5d
+                font:
+                    family: $opensans
+                    weight: 400
+                    size: 1.55rem
+                text-align: center
+            &__subtext
+                color: #7e7e7e
+                font:
+                    family: $opensans
+                    size: .9rem
+                line-height: 1.25rem
+
+            &__quote
+                margin-top: 5vh
+                padding-left: 5vw
+                color: #7e7e7e
+                font:
+                    family: $opensans
+                    size: .8rem
+                    style: italic
+                line-height: 1.25rem
+                border-left: 6px solid #4eacdd
+        
+            &__link
+                padding: .5rem 1rem
+                margin: 5vh auto
+                width: 50%
+                position: absolute
+                left: 0
+                right: 0
+                font:
+                    family: $opensans
+                    size: 1rem
+                color: #14af8f
+                text:
+                    decoration: none
+                    align: center
+                    transform: uppercase
+                border: 2px solid #14af8f
+            &__img
+                position: absolute
+                top: 85vh
+                right: 0
+                margin: 0 auto
+                width: 60%
+                z-index: -1
+                
+               
+    .portfolio
+        height: 110vh
+        padding-top: 10vh
+        position: relative
+        background-color: #FFFFFF
+        z-index: 3
+
+        &__text
+            &__title
+                margin-top: 0
+                color: #5d5d5d
+                font:
+                    family: $opensans
+                    weight: 400
+                    size: 2rem
+                text-align: center
+            &__subtitle
+                color: #474e5d
+                font:
+                    family: $opensans
+                    size: .9rem
+                    weight: 700
+                    style: italic
+                line-height: 1.25rem
+            
+            &__subtext
+                margin-top: 5vh
+                color: #7e7e7e
+                font:
+                    family: $opensans
+                    size: .9rem
+                line-height: 1.25rem
+            
+            &__link
+                padding: .5rem 1rem
+                margin: 5vh auto
+                width: 65%
+                position: absolute
+                left: 0
+                right: 0
+                font:
+                    family: $opensans
+                    size: 1rem
+                color: #ea4c89
+                text:
+                    decoration: none
+                    align: center
+                    transform: uppercase
+                border: 2px solid #ea4c89
+            
+            &__img
+                position: absolute
+                left: 0
+                width: 100%
+                margin-top: 17vh
+                z-index: -1
+    
+    .donate
+        height: 50vh
+        background:
+            image: url("../img/donatebg.jpg")
+            size: cover
+        
+        &__text
+            position: relative
+            top: 15vh
+            &__title
+                margin-top: 0
+                font:
+                    family: $opensans
+                    weight: 400
+                color: #FFFFFF
+                text-align: center
+            &__link
+                padding: .5rem 1rem
+                margin: 2.5vh auto
+                width: 65%
+                position: absolute
+                left: 0
+                right: 0
+                font:
+                    family: $opensans
+                    size: 1rem
+                color: #FFFFFF
+                text:
+                    decoration: none
+                    align: center
+                    transform: uppercase
+                border: 2px solid #FFFFFF
+                strong
+                    font-style: italic
+        
+    .contact
+        padding: 10vh 0
+        background-color: #f4f4f4
+        &__icons
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            text-align: center
+            a
+                margin: 0 auto
+                padding: 10px 0
+                width: 40px
+                color: #545454
+                border: 2px solid #545454
+                border-radius: 50%
+        
+        &__subscription-form
+            margin-top: 5vh
+            text-align: center
+            label
+                display: block
+                margin-bottom: 2vh
+                font:
+                    family: $opensans
+                    style: italic
+                    weight: 700
+                color: #545454
+            
+            input
+                padding-left: 10px
+                height: 30px
+                background-color: #FFFFFF
+                border: 0
+                border-radius: 10px 0 0 10px
+                font:
+                    family: $opensans
+                    style: italic
+                    weight: 700
+                    size: .9rem
+                transition: .2s
+                &:focus
+                    outline: none
+                    background-color: lighten(#e1e1e1, 5%)
+                    transition: .2s
+            
+            button
+                position: relative
+                margin-left: -5px
+                padding: 0 10px
+                height: 30px
+                background-color: #FFFFFF
+                border: 0
+                border-radius: 0 10px 10px 0
+                color: #6ec5ea
+                &:after
+                    content: ''
+                    position: absolute
+                    width: 1px
+                    height: 15px
+                    left: 0
+                    top: 7.5px
+                    background-color: #d6d6d6
+                
+    .footer
+        padding: 3vh 0
+        &__text
+            text-align: center
+            font:
+                family: $opensans
+                style: italic
+                size: .6rem
+            color: #747474
+            strong
+                font-style: italic
+
+
+
+
+@media only screen and (min-width : 48em)
+    .header        
+        .navigation
+            &__logo
+                left: 10vh
+                width: 10%
+
+        
+        &__text
+            padding-top: 30vh
+            text-align: right
+            &__title
+                font:
+       
+                    size: 3.75rem
+            &__subtitle
+                font:
+                    size: 1.3rem
+        
+    
+            
+            &__img
+                left: -40vw
+                width: 30%
+
+                
+
+
+    .about
+        height: 100vh
+        padding-top: 20vh
+        &__text
+            &__title
+                font:
+                    family: $opensans
+                    weight: 400
+                    size: 1.75rem
+                text-align: left
+            &__subtext
+                width: 65%
+                font-size: .8rem
+
+            &__quote
+                padding-left: 2.5vw
+                width: 65%
+        
+            &__link
+                margin: 0
+                margin-top: 10vh
+                width: 20%
+                left: 10%
+                
+            &__img
+                position: absolute
+                top: 20vh
+                right: -5vw
+                margin: 0 auto
+                width: 40%
+                z-index: -1
+               
+    .portfolio
+        height: 100vh
+        position: relative
+        &__text
+            &__title 
+                text-align: left
+                width: 50%
+                margin-left: 50%
+            &__subtitle
+                text-align: left
+                width: 50%
+                margin-left: 50%
+
+            &__subtext
+                text-align: left
+                width: 50%
+                margin-left: 50%
+
+            &__link
+                width: 27%
+                left: 27%
+                z-index: 333
+            
+            &__img
+                position: absolute
+                left: 0
+                width: 50%
+                margin-top: 0
+                z-index: -1
+    
+    .donate
+        &__text
+            &__link
+                width: 30%
+    
+        
+    .contact
+        &__icons
+            width: 40%
+            margin: 0 auto
+      
+        
+        &__subscription-form
+            margin-top: 5vh
+            text-align: center
+            label
+                display: block
+                margin-bottom: 2vh
+                font:
+                    family: $opensans
+                    style: italic
+                    weight: 700
+                color: #545454
+            
+            input
+                padding-left: 10px
+                height: 30px
+                background-color: #FFFFFF
+                border: 0
+                border-radius: 10px 0 0 10px
+                font:
+                    family: $opensans
+                    style: italic
+                    weight: 700
+                    size: .9rem
+                transition: .2s
+                &:focus
+                    outline: none
+                    background-color: lighten(#e1e1e1, 5%)
+                    transition: .2s
+            
+            button
+                position: relative
+                margin-left: -5px
+                padding: 0 10px
+                height: 30px
+                background-color: #FFFFFF
+                border: 0
+                border-radius: 0 10px 10px 0
+                color: #6ec5ea
+                &:after
+                    content: ''
+                    position: absolute
+                    width: 1px
+                    height: 15px
+                    left: 0
+                    top: 7.5px
+                    background-color: #d6d6d6
+                
+    .footer
+        padding: 3vh 0
+        &__text
+            text-align: center
+            font:
+                family: $opensans
+                style: italic
+                size: .6rem
+            color: #747474
+            strong
+                font-style: italic
+
+
+
+
+
+@media only screen and (min-width : 64em)
+    .header        
+        .navigation
+            
+            &__showMenuBtn
+                top: 10vh
+
+           
+        
+        &__text
+            &__title
+                font:
+       
+                    size: 5.75rem
+            &__subtitle
+                font:
+                    size: 1.8rem
+        
+            &__link
+                transition: .3s
+                &:hover
+                    background-color: #FFFFFF
+                    color: #6b90ff
+            
+            &__img
+                left: -40vw
+                width: 20%
+
+                
+
+
+    .about
+        &__text
+            &__title
+                font:
+                    size: 2.25rem
+            &__subtext
+                width: 45%
+                font-size: .9rem
+
+            &__quote
+                font-size: .9rem
+                width: 45%
+        
+            &__link
+                width: 12%
+                transition: .3s
+                &:hover
+                    transition: .3s
+                    background-color: #14af8f
+                    color: #f4f4f4
+                
+            &__img
+                top: 35vh
+                width: 25%
+
+               
+    .portfolio
+        &__text
+            &__title 
+                font-size: 2.25rem
+            &__subtitle
+                width: 40%
+                font-size: 1rem
+            &__subtext
+                width: 40%
+                font-size: 1rem
+
+            &__link
+                width: 15%
+                left: 15%
+                transition: .3s
+                &:hover
+                    transition: .3s
+                    background-color: #ea4c89 
+                    color: #FFFFFF
+  
+    
+    .donate
+        &__text
+            &__link
+                width: 18%
+                transition: .3s
+                &:hover
+                    background-color: #FFFFFF
+                    color: #13c3ae
+                    transition: .3s
+    
+        
+    .contact
+        &__icons
+            width: 25%
+            a
+                transition: .2s
+                &:hover
+                    background-color: #545454
+                    color: #FFFFFF
+                    transition: .2s
+
+        &__subscription-form
+            
+            button
+                transition: .2s
+                &:hover
+                    color: #FFFFFF
+                    background-color: #6ec5ea
+                    cursor: pointer
+                    transition: .2s 
+                
+    .footer
+        padding: 3vh 0
+        &__text
+            text-align: center
+            font:
+                family: $opensans
+                style: italic
+                size: .6rem
+            color: #747474
+            strong
+                font-style: italic
